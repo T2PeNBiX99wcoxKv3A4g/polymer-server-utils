@@ -13,5 +13,6 @@ class ModelGenerator(output: FabricDataOutput) : FabricModelProvider(output) {
 
     override fun generateItemModels(itemModelGenerator: ItemModelGenerator) {
         itemModelGenerator.register(Items.COOKED_ROTTEN_FLESH, Models.GENERATED)
+        itemModelGenerator.register(Items.COOKED_CARROT, Models.GENERATED)
     }
 }
