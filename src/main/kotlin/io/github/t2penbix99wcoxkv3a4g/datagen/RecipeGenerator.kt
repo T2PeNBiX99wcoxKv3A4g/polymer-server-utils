@@ -17,41 +17,59 @@ import java.util.concurrent.CompletableFuture
 class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFuture<RegistryWrapper.WrapperLookup>) :
     FabricRecipeProvider(output, registriesFuture) {
     override fun generate(exporter: RecipeExporter) {
-        campfireRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 600)
-        smokingRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 100)
-        smeltingRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 200)
+        campfireRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 0.15f, 600)
+        smokingRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 0.15f, 100)
+        smeltingRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 0.15f, 200)
     }
 
-    private fun campfireRecipe(exporter: RecipeExporter, input: Item, output: Item, cookingTime: Int) {
+    private fun campfireRecipe(
+        exporter: RecipeExporter,
+        input: Item,
+        output: Item,
+        experience: Float,
+        cookingTime: Int
+    ) {
         CookingRecipeJsonBuilder.createCampfireCooking(
             Ingredient.ofItems(input),
             RecipeCategory.FOOD,
             output,
-            0.15f,
+            experience,
             cookingTime
         )
             .criterion(hasItem(input), conditionsFromItem(input))
             .offerTo(exporter, Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_campfire_cooking"))
     }
 
-    private fun smokingRecipe(exporter: RecipeExporter, input: Item, output: Item, cookingTime: Int) {
+    private fun smokingRecipe(
+        exporter: RecipeExporter,
+        input: Item,
+        output: Item,
+        experience: Float,
+        cookingTime: Int
+    ) {
         CookingRecipeJsonBuilder.createSmoking(
             Ingredient.ofItems(input),
             RecipeCategory.FOOD,
             output,
-            0.15f,
+            experience,
             cookingTime
         )
             .criterion(hasItem(input), conditionsFromItem(input))
             .offerTo(exporter, Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_smoking"))
     }
 
-    private fun smeltingRecipe(exporter: RecipeExporter, input: Item, output: Item, cookingTime: Int) {
+    private fun smeltingRecipe(
+        exporter: RecipeExporter,
+        input: Item,
+        output: Item,
+        experience: Float,
+        cookingTime: Int
+    ) {
         CookingRecipeJsonBuilder.createSmelting(
             Ingredient.ofItems(input),
             RecipeCategory.FOOD,
             output,
-            0.15f,
+            experience,
             cookingTime
         )
             .criterion(hasItem(input), conditionsFromItem(input))
