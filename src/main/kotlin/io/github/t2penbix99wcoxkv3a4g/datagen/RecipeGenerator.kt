@@ -20,6 +20,10 @@ class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFut
         campfireRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 0.15f, 600)
         smokingRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 0.15f, 100)
         smeltingRecipe(exporter, MCItems.ROTTEN_FLESH, Items.COOKED_ROTTEN_FLESH, 0.15f, 200)
+
+        campfireRecipe(exporter, MCItems.CARROT, Items.COOKED_CARROT, 0.35f, 600)
+        smokingRecipe(exporter, MCItems.CARROT, Items.COOKED_CARROT, 0.35f, 100)
+        smeltingRecipe(exporter, MCItems.CARROT, Items.COOKED_CARROT, 0.35f, 200)
     }
 
     private fun campfireRecipe(
