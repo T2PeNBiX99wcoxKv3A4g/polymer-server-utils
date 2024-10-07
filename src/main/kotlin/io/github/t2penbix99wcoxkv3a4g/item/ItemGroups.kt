@@ -14,12 +14,13 @@ object ItemGroups {
         .icon { ItemStack(Items.COOKED_ROTTEN_FLESH) }
         .entries { _: ItemGroup.DisplayContext?, entries: ItemGroup.Entries ->
             entries.add(Items.COOKED_ROTTEN_FLESH)
+            entries.add(Items.COOKED_CARROT)
         }
         .build()
 
     @JvmStatic
     fun register() {
         PolymerItemGroupUtils.registerPolymerItemGroup(Identifier.of(Utils.MOD_ID, "item-group"), MOD_GROUP)
-        Utils.logger.info("Register Items.")
+        Utils.logger.info("Register Items")
     }
 }

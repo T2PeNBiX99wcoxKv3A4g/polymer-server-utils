@@ -19,6 +19,12 @@ object Items {
     )
 
     @JvmStatic
+    val COOKED_CARROT: Item = register(
+        "cooked_carrot",
+        CustomPolymerItem(Item.Settings().food(FoodComponents.COOKED_CARROT), Items.CARROT, "cooked_carrot")
+    )
+
+    @JvmStatic
     private fun register(id: String, item: Item): Item {
         return Registry.register(Registries.ITEM, Identifier.of(Utils.MOD_ID, id), item)
     }
