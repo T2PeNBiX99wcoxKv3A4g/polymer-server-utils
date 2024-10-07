@@ -13,6 +13,7 @@ class EnglishLangProvider(
         registryLookup: RegistryWrapper.WrapperLookup, translationBuilder: TranslationBuilder
     ) {
         translationBuilder.add(Items.COOKED_ROTTEN_FLESH, "Cooked Rotten Flesh")
+        translationBuilder.add(Items.COOKED_CARROT, "Cooked Carrot")
 
         // Load an existing language file.
         try {

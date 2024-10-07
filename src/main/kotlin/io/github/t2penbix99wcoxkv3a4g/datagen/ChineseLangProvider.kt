@@ -13,6 +13,7 @@ class ChineseLangProvider(
         registryLookup: RegistryWrapper.WrapperLookup, translationBuilder: TranslationBuilder
     ) {
         translationBuilder.add(Items.COOKED_ROTTEN_FLESH, "熟腐肉")
+        translationBuilder.add(Items.COOKED_CARROT, "熟胡萝卜")
 
         // Load an existing language file.
         try {

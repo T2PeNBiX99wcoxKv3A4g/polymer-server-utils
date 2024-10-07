@@ -13,6 +13,7 @@ class TaiwaneseLangProvider(
         registryLookup: RegistryWrapper.WrapperLookup, translationBuilder: TranslationBuilder
     ) {
         translationBuilder.add(Items.COOKED_ROTTEN_FLESH, "烤腐肉")
+        translationBuilder.add(Items.COOKED_CARROT, "烤胡蘿蔔")
 
         // Load an existing language file.
         try {

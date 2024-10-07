@@ -13,6 +13,7 @@ class JapaneseLangProvider(
         registryLookup: RegistryWrapper.WrapperLookup, translationBuilder: TranslationBuilder
     ) {
         translationBuilder.add(Items.COOKED_ROTTEN_FLESH, "焼き腐った肉")
+        translationBuilder.add(Items.COOKED_CARROT, "焼きニンジン")
 
         // Load an existing language file.
         try {
