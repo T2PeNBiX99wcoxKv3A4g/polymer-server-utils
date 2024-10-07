@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "io.github.t2penbix99wcoxkv3a4g.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
