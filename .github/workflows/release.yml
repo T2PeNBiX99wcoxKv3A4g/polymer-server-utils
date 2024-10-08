@@ -28,6 +28,48 @@ jobs:
           java-version: ${{ matrix.java }}
           distribution: 'oracle'
 
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pre_release_branches: "fast"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.6'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Change version in `gradle.properties`
+        run: python .github/change_version.py ${{ steps.tag_version.outputs.new_tag }}
+
+      - name: Set git user
+        run: |
+          git config --local user.name actions-user
+          git config --local user.email "actions@github.com" 
+
+      - name: Check for changes
+        run: git status
+
+      - name: Stage changed files
+        run: git add .
+
+      - name: Commit changed files
+        run: "git commit -m \"Workflow: Update version in `gradle.properties`\""
+
+      - name: Set remote url
+        run: git remote set-url origin https://T2PeNBiX99wcoxKv3A4g:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+      - name: Fetch from master
+        run: git fetch origin master
+
+      - name: Push code to master
+        run: git push origin master
+
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
 
@@ -66,36 +108,3 @@ jobs:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
-
-      - name: checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12.6'
-          cache: 'pip'
-
-      - name: Install Dependencies
-        run: pip install -r requirements.txt
-
-      - name: Change version in `gradle.properties`
-        run: python .github/change_version.py ${{ steps.tag_version.outputs.new_tag }}
-
-      - name: Switching from HTTPS to SSH
-        run: git remote set-url origin ${{ secrets.ssh }}
-
-      - name: Check for changes
-        run: git status
-
-      - name: Stage changed files
-        run: git add .
-
-      - name: Commit changed files
-        run: "git commit -m \"Workflows: Update version in `gradle.properties`\""
-
-      - name: Fetch from master
-        run: git fetch origin master
-
-      - name: Push code to master
-        run: git push origin HEAD:master
