@@ -8,20 +8,13 @@ import java.util.concurrent.CompletableFuture
 
 class TaiwaneseLangProvider(
     val dataGenerator: FabricDataOutput, registryLookup: CompletableFuture<RegistryWrapper.WrapperLookup>
-) : FabricLanguageProvider(dataGenerator, "zh_tw", registryLookup) {
+) : FabricLanguageProvider(dataGenerator, "zh_tw", registryLookup), LangUtil {
     override fun generateTranslations(
         registryLookup: RegistryWrapper.WrapperLookup, translationBuilder: TranslationBuilder
     ) {
         translationBuilder.add(Items.COOKED_ROTTEN_FLESH, "烤腐肉")
         translationBuilder.add(Items.COOKED_CARROT, "烤胡蘿蔔")
-
-        // Load an existing language file.
-        try {
-            val existingFilePath =
-                dataGenerator.modContainer.findPath("assets/polymer-server-utils/lang_gen/zh_tw.existing.json").get()
-            translationBuilder.add(existingFilePath)
-        } catch (e: Exception) {
-            throw RuntimeException("Failed to add existing language file!", e)
-        }
+        
+        loadExistingFile(dataGenerator, translationBuilder, "zh_tw")
     }
 }
