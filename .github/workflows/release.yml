@@ -62,7 +62,7 @@ jobs:
         run: git add .
 
       - name: Commit changed files
-        run: "git commit -m \"Workflow: Update version in `gradle.properties`\""
+        run: "git commit -m 'Action: Update version in `gradle.properties`'"
 
 #      - name: Set remote url
 #        run: git remote set-url origin https://T2PeNBiX99wcoxKv3A4g:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
