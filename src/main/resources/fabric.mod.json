@@ -8,10 +8,10 @@
 		"ゆきよさなこ"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/T2PeNBiX99wcoxKv3A4g/Polymer-Server-Utils",
+		"sources": "https://github.com/T2PeNBiX99wcoxKv3A4g/Polymer-Server-Utils"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/polymer-server-utils/icon.png",
 	"environment": "*",
 	"entrypoints": {
