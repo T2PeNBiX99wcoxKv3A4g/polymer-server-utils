@@ -24,6 +24,8 @@ class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFut
         campfireRecipe(exporter, MCItems.CARROT, Items.COOKED_CARROT, 0.35f)
         smokingRecipe(exporter, MCItems.CARROT, Items.COOKED_CARROT, 0.35f)
         smeltingRecipe(exporter, MCItems.CARROT, Items.COOKED_CARROT, 0.35f)
+
+        blastingRecipe(exporter, MCItems.COBBLESTONE, MCItems.STONE, 0.1f, RecipeCategory.BUILDING_BLOCKS)
     }
 
     private fun campfireRecipe(
@@ -31,20 +33,15 @@ class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFut
         input: Item,
         output: Item,
         experience: Float,
-        recipeCategory: RecipeCategory = RecipeCategory.FOOD
+        recipeCategory: RecipeCategory = RecipeCategory.FOOD,
+        cookingTime: Int = 600
     ) {
         CookingRecipeJsonBuilder.createCampfireCooking(
-            Ingredient.ofItems(input),
-            recipeCategory,
-            output,
-            experience,
-            600
+            Ingredient.ofItems(input), recipeCategory, output, experience, cookingTime
+        ).criterion(hasItem(input), conditionsFromItem(input)).offerTo(
+            exporter,
+            Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_campfire_cooking_${getRecipeName(input)}")
         )
-            .criterion(hasItem(input), conditionsFromItem(input))
-            .offerTo(
-                exporter,
-                Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_campfire_cooking_${getRecipeName(input)}")
-            )
     }
 
     private fun smokingRecipe(
@@ -52,14 +49,14 @@ class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFut
         input: Item,
         output: Item,
         experience: Float,
-        recipeCategory: RecipeCategory = RecipeCategory.FOOD
+        recipeCategory: RecipeCategory = RecipeCategory.FOOD,
+        cookingTime: Int = 100
     ) {
-        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(input), recipeCategory, output, experience, 100)
-            .criterion(hasItem(input), conditionsFromItem(input))
-            .offerTo(
-                exporter,
-                Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_smoking_${getRecipeName(input)}")
-            )
+        CookingRecipeJsonBuilder.createSmoking(
+            Ingredient.ofItems(input), recipeCategory, output, experience, cookingTime
+        ).criterion(hasItem(input), conditionsFromItem(input)).offerTo(
+            exporter, Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_smoking_${getRecipeName(input)}")
+        )
     }
 
     private fun blastingRecipe(
@@ -67,14 +64,14 @@ class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFut
         input: Item,
         output: Item,
         experience: Float,
-        recipeCategory: RecipeCategory = RecipeCategory.FOOD
+        recipeCategory: RecipeCategory = RecipeCategory.FOOD,
+        cookingTime: Int = 100
     ) {
-        CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(input), recipeCategory, output, experience, 100)
-            .criterion(hasItem(input), conditionsFromItem(input))
-            .offerTo(
-                exporter,
-                Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_blasting_${getRecipeName(input)}")
-            )
+        CookingRecipeJsonBuilder.createBlasting(
+            Ingredient.ofItems(input), recipeCategory, output, experience, cookingTime
+        ).criterion(hasItem(input), conditionsFromItem(input)).offerTo(
+            exporter, Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_blasting_${getRecipeName(input)}")
+        )
     }
 
     private fun smeltingRecipe(
@@ -82,13 +79,13 @@ class RecipeGenerator(output: FabricDataOutput, registriesFuture: CompletableFut
         input: Item,
         output: Item,
         experience: Float,
-        recipeCategory: RecipeCategory = RecipeCategory.FOOD
+        recipeCategory: RecipeCategory = RecipeCategory.FOOD,
+        cookingTime: Int = 200
     ) {
-        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(input), recipeCategory, output, experience, 200)
-            .criterion(hasItem(input), conditionsFromItem(input))
-            .offerTo(
-                exporter,
-                Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_smelting_${getRecipeName(input)}")
-            )
+        CookingRecipeJsonBuilder.createSmelting(
+            Ingredient.ofItems(input), recipeCategory, output, experience, cookingTime
+        ).criterion(hasItem(input), conditionsFromItem(input)).offerTo(
+            exporter, Identifier.of(Utils.MOD_ID, "${getRecipeName(output)}_from_smelting_${getRecipeName(input)}")
+        )
     }
 }

@@ -1,8 +1,9 @@
-// 1.21.1	2024-10-09T18:00:52.0061556	Polymer Server Utils/Recipes
+// 1.21.1	2024-10-09T18:25:16.6076286	Polymer Server Utils/Recipes
 9414d0cba746a25347cdaaf035c2f61cdf9cc292 data\polymer-server-utils\recipe\cooked_carrot_from_smelting_carrot.json
 25231f6572baffb835f1ef2da5aad2fc0b13e9c4 data\polymer-server-utils\advancement\recipes\food\cooked_carrot_from_smoking_carrot.json
 3b0963c114642f902233d2fbf5174b79c7285a33 data\polymer-server-utils\advancement\recipes\food\cooked_carrot_from_smelting_carrot.json
 f53f05a1b1a6539cc41659ee39e148021c8d0cee data\polymer-server-utils\recipe\cooked_rotten_flesh_from_smelting_rotten_flesh.json
+9688986a0d41022b2af9c034e409ba6f772e0783 data\polymer-server-utils\advancement\recipes\building_blocks\stone_from_blasting_cobblestone.json
 9865e927fe2155c91c8006cd6ac1e99aadd6c8e4 data\polymer-server-utils\recipe\cooked_rotten_flesh_from_campfire_cooking_rotten_flesh.json
 e0496b61161e7e315d9979e451c15da60fe2bb6c data\polymer-server-utils\advancement\recipes\food\cooked_rotten_flesh_from_smoking_rotten_flesh.json
 929ecc2b1edd14b364e189cce5c9b58a3eea3e4e data\polymer-server-utils\advancement\recipes\food\cooked_rotten_flesh_from_campfire_cooking_rotten_flesh.json
@@ -11,3 +12,4 @@ e0496b61161e7e315d9979e451c15da60fe2bb6c data\polymer-server-utils\advancement\r
 ea25ed84d11808a450d09db1d77c05854185b046 data\polymer-server-utils\recipe\cooked_rotten_flesh_from_smoking_rotten_flesh.json
 a994a0a1f8af2b2cc93a22fd24199ee30efda243 data\polymer-server-utils\recipe\cooked_carrot_from_campfire_cooking_carrot.json
 1e639f662f29dad1be2205e34295d73c39aa1677 data\polymer-server-utils\recipe\cooked_carrot_from_smoking_carrot.json
+074fd86f12ee941ac102ab69f06b67214bfa51cc data\polymer-server-utils\recipe\stone_from_blasting_cobblestone.json
