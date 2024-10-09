@@ -41,4 +41,5 @@ replay_*.log
 
 # datagen
 
-generated/.cache
+*/generated/.cache
+/src/main/generated/.cache
