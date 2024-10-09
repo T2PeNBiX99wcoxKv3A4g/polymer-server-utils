@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "polymer-server-utils:cooked_rotten_flesh"
+        "recipe": "polymer-server-utils:cooked_rotten_flesh_from_smoking_rotten_flesh"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "polymer-server-utils:cooked_rotten_flesh"
+      "polymer-server-utils:cooked_rotten_flesh_from_smoking_rotten_flesh"
     ]
   }
 }

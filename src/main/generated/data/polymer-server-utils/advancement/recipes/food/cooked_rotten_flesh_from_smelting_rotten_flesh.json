@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_carrot": {
+    "has_rotten_flesh": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:carrot"
+            "items": "minecraft:rotten_flesh"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "polymer-server-utils:cooked_carrot"
+        "recipe": "polymer-server-utils:cooked_rotten_flesh_from_smelting_rotten_flesh"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_carrot"
+      "has_rotten_flesh"
     ]
   ],
   "rewards": {
     "recipes": [
-      "polymer-server-utils:cooked_carrot"
+      "polymer-server-utils:cooked_rotten_flesh_from_smelting_rotten_flesh"
     ]
   }
 }
