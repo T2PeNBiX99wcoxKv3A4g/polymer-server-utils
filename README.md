@@ -9,3 +9,4 @@ TODO
 ### Credits
 
 * [Polymer](https://github.com/Patbox/polymer)
+* [Blåhaj](https://github.com/hibiii/Blahaj) - Models

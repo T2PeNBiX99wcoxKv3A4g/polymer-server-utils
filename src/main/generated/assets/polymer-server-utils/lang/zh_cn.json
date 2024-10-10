@@ -1,5 +1,16 @@
 {
   "item-group.polymer-server-utils.item-group": "Polymer 服务器杂项",
+  "item.polymer-server-utils.blue_shark": "柔软玩具鲨鱼",
+  "item.polymer-server-utils.blue_shark.tooltip": "别名 Blahaj",
+  "item.polymer-server-utils.blue_whale": "柔软玩具蓝鲸",
+  "item.polymer-server-utils.blue_whale.tooltip": "别名 Blavingad. 可容纳一叠物品.",
+  "item.polymer-server-utils.bread": "面包枕头",
+  "item.polymer-server-utils.brown_bear": "柔软玩具棕熊",
+  "item.polymer-server-utils.brown_bear.tooltip": "别名 Djungelskog",
   "item.polymer-server-utils.cooked_carrot": "熟胡萝卜",
-  "item.polymer-server-utils.cooked_rotten_flesh": "熟腐肉"
+  "item.polymer-server-utils.cooked_rotten_flesh": "熟腐肉",
+  "item.polymer-server-utils.gray_shark": "灰色玩具鲨鱼",
+  "item.polymer-server-utils.gray_shark.tooltip": "别名 Klappar Haj",
+  "tooltip.polymer-server-utils.owner.craft": "由 %s 制造",
+  "tooltip.polymer-server-utils.owner.rename": "%s 被 %s 重命名"
 }

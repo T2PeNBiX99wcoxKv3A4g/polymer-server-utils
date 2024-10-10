@@ -2,11 +2,11 @@
   "required": true,
   "package": "io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "AllayEntityMixin",
-    "AnvilScreenHandlerMixin",
+  "client": [
+    "BipedEntityModelMixin",
     "ClientConnectionMixin",
-    "ForgingScreenHandlerMixin"
+    "ItemMixin",
+    "PlayerEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

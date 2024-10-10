@@ -1,3 +1,9 @@
 {
-  "item-group.polymer-server-utils.item-group": "Polymer 伺服器雜項"
+  "item-group.polymer-server-utils.item-group": "Polymer 伺服器雜項",
+  "item.polymer-server-utils.blue_shark.tooltip": "別名 Blahaj",
+  "item.polymer-server-utils.gray_shark.tooltip": "別名 Klappar Haj",
+  "item.polymer-server-utils.blue_whale.tooltip": "別名 Blavingad. 可容納一疊物品.",
+  "item.polymer-server-utils.brown_bear.tooltip": "別名 Djungelskog",
+  "tooltip.polymer-server-utils.owner.craft": "由 %s 製造",
+  "tooltip.polymer-server-utils.owner.rename": "%s 被 %s 重新命名"
 }

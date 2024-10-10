@@ -17,19 +17,29 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "io.github.t2penbix99wcoxkv3a4g.PolymerServerUtils",
+				"value": "io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.PolymerServerUtils",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.PolymerServerUtilsClient",
 				"adapter": "kotlin"
 			}
 		],
 		"fabric-datagen": [
 			{
-				"value": "io.github.t2penbix99wcoxkv3a4g.PolymerServerUtilsDataGenerator",
+				"value": "io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.PolymerServerUtilsDataGenerator",
 				"adapter": "kotlin"
 			}
 		]
 	},
 	"mixins": [
-		"polymer-server-utils.mixins.json"
+		"polymer-server-utils.mixins.json",
+		{
+			"config": "polymer-server-utils.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
 		"fabricloader": ">=0.16.5",

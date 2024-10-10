@@ -1,5 +1,16 @@
 {
   "item-group.polymer-server-utils.item-group": "Polymer Server Utils",
+  "item.polymer-server-utils.blue_shark": "Soft Toy Shark",
+  "item.polymer-server-utils.blue_shark.tooltip": "a.k.a. Blahaj",
+  "item.polymer-server-utils.blue_whale": "Soft Toy Blue Whale",
+  "item.polymer-server-utils.blue_whale.tooltip": "a.k.a. Blavingad. Holds a stack of items.",
+  "item.polymer-server-utils.bread": "Bread Pillow",
+  "item.polymer-server-utils.brown_bear": "Soft Toy Brown Bear",
+  "item.polymer-server-utils.brown_bear.tooltip": "a.k.a. Djungelskog",
   "item.polymer-server-utils.cooked_carrot": "Cooked Carrot",
-  "item.polymer-server-utils.cooked_rotten_flesh": "Cooked Rotten Flesh"
+  "item.polymer-server-utils.cooked_rotten_flesh": "Cooked Rotten Flesh",
+  "item.polymer-server-utils.gray_shark": "Gray Toy Shark",
+  "item.polymer-server-utils.gray_shark.tooltip": "a.k.a. Klappar Haj",
+  "tooltip.polymer-server-utils.owner.craft": "Crafted by %s",
+  "tooltip.polymer-server-utils.owner.rename": "%s of %s"
 }

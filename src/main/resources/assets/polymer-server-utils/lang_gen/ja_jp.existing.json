@@ -1,3 +1,9 @@
 {
-  "item-group.polymer-server-utils.item-group": "Polymerサーバーのもの"
+  "item-group.polymer-server-utils.item-group": "Polymerサーバーのもの",
+  "item.polymer-server-utils.blue_shark.tooltip": "通称Blahaj",
+  "item.polymer-server-utils.gray_shark.tooltip": "通称Klappar Haj",
+  "item.polymer-server-utils.blue_whale.tooltip": "通称Blavingad。アイテムのスタックを収納できる。",
+  "item.polymer-server-utils.brown_bear.tooltip": "通称Djungelskog",
+  "tooltip.polymer-server-utils.owner.craft": "%sに作られた",
+  "tooltip.polymer-server-utils.owner.rename": "%sは%sで改変してた"
 }

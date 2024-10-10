@@ -1,0 +1,6 @@
+{
+	"parent": "polymer-server-utils:item/blue_shark",
+	"textures": {
+		"0": "polymer-server-utils:item/gray_shork"
+	}
+}
