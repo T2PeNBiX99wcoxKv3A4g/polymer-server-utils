@@ -1,16 +1,17 @@
 {
   "item-group.polymer-server-utils.item-group": "Polymerサーバーのもの",
-  "item.polymer-server-utils.blue_shark": "柔らかいサメのおもちゃ",
+  "item.polymer-server-utils.blue_shark": "青いサメのおもちゃ",
   "item.polymer-server-utils.blue_shark.tooltip": "通称Blahaj",
-  "item.polymer-server-utils.blue_whale": "柔らかい青い鯨のおもちゃ",
+  "item.polymer-server-utils.blue_whale": "クジラのおもちゃ",
   "item.polymer-server-utils.blue_whale.tooltip": "通称Blavingad。アイテムのスタックを収納できる。",
-  "item.polymer-server-utils.bread": "パン枕",
-  "item.polymer-server-utils.brown_bear": "柔らかいヒグマのおもちゃ",
+  "item.polymer-server-utils.bread": "パンの抱き枕",
+  "item.polymer-server-utils.brown_bear": "クマのおもちゃ",
   "item.polymer-server-utils.brown_bear.tooltip": "通称Djungelskog",
   "item.polymer-server-utils.cooked_carrot": "焼きニンジン",
   "item.polymer-server-utils.cooked_rotten_flesh": "焼き腐った肉",
-  "item.polymer-server-utils.gray_shark": "灰色サメのおもちゃ",
+  "item.polymer-server-utils.gray_shark": "灰色のサメのおもちゃ",
   "item.polymer-server-utils.gray_shark.tooltip": "通称Klappar Haj",
+  "item.polymer-server-utils.hah": "は？",
   "tooltip.polymer-server-utils.owner.craft": "%sに作られた",
-  "tooltip.polymer-server-utils.owner.rename": "%sは%sで改変してた"
+  "tooltip.polymer-server-utils.owner.rename": "%sは%sのおもちゃ"
 }

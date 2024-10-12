@@ -40,6 +40,8 @@ object PolymerServerUtils : ModInitializer {
                 LootTables.STRONGHOLD_CROSSING_CHEST, LootTables.STRONGHOLD_CORRIDOR_CHEST -> {
                     val pb = LootPool.builder()
                         .with(ItemEntry.builder(Items.KLAPPAR_HAJ).weight(5))
+                        .with(ItemEntry.builder(Items.BLAHAJ).weight(20))
+                        .with(ItemEntry.builder(Items.BLAVINGAD).weight(15))
                         .with(ItemEntry.builder(MCItems.AIR).weight(100))
                     tableBuilder.pool(pb)
                 }
@@ -47,6 +49,8 @@ object PolymerServerUtils : ModInitializer {
                 LootTables.VILLAGE_PLAINS_CHEST -> {
                     val pb = LootPool.builder()
                         .with(ItemEntry.builder(Items.KLAPPAR_HAJ))
+                        .with(ItemEntry.builder(Items.BLAHAJ))
+                        .with(ItemEntry.builder(Items.BLAVINGAD))
                         .with(ItemEntry.builder(MCItems.AIR).weight(43))
                     tableBuilder.pool(pb)
                 }
@@ -54,6 +58,8 @@ object PolymerServerUtils : ModInitializer {
                 LootTables.VILLAGE_TAIGA_HOUSE_CHEST, LootTables.VILLAGE_SNOWY_HOUSE_CHEST -> {
                     val pb = LootPool.builder()
                         .with(ItemEntry.builder(Items.KLAPPAR_HAJ).weight(5))
+                        .with(ItemEntry.builder(Items.BLAHAJ).weight(20))
+                        .with(ItemEntry.builder(Items.BLAVINGAD).weight(15))
                         .with(ItemEntry.builder(MCItems.AIR).weight(54))
                     tableBuilder.pool(pb)
                 }
@@ -63,6 +69,30 @@ object PolymerServerUtils : ModInitializer {
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 5) {
             it.add { entity, random ->
                 return@add TradeOffer(TradedItem(MCItems.EMERALD, 15), ItemStack(Items.KLAPPAR_HAJ), 2, 30, 0.1f)
+            }
+        }
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 2) {
+            it.add { entity, random ->
+                return@add TradeOffer(TradedItem(MCItems.EMERALD, 5), ItemStack(Items.BLAHAJ), 64, 10, 0.05f)
+            }
+        }
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 2) {
+            it.add { entity, random ->
+                return@add TradeOffer(TradedItem(MCItems.EMERALD, 4), ItemStack(Items.BREAD), 64, 10, 0.05f)
+            }
+        }
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 3) {
+            it.add { entity, random ->
+                return@add TradeOffer(TradedItem(MCItems.EMERALD, 8), ItemStack(Items.BLAVINGAD), 64, 10, 0.1f)
+            }
+        }
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.SHEPHERD, 3) {
+            it.add { entity, random ->
+                return@add TradeOffer(TradedItem(MCItems.EMERALD, 8), ItemStack(Items.BROWN_BEAR), 64, 10, 0.1f)
             }
         }
 

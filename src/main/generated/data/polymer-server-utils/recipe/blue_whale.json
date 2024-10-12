@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:blue_wool"
+    },
+    "G": {
+      "item": "minecraft:light_gray_wool"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    " # ",
+    "###",
+    "GW "
+  ],
+  "result": {
+    "count": 1,
+    "id": "polymer-server-utils:blue_whale"
+  }
+}

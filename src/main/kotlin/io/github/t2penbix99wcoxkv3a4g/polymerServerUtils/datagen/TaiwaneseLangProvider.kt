@@ -19,6 +19,7 @@ class TaiwaneseLangProvider(
         translationBuilder.add(Items.BLAVINGAD, "柔軟玩具藍鯨")
         translationBuilder.add(Items.BROWN_BEAR, "柔軟玩具棕熊")
         translationBuilder.add(Items.BREAD, "麪包枕頭")
+        translationBuilder.add(Items.HAH, "哈?")
         
         loadExistingFile(dataGenerator, translationBuilder, "zh_tw")
     }

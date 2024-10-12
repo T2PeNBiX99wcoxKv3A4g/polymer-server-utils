@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:orange_wool"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "polymer-server-utils:bread"
+  }
+}

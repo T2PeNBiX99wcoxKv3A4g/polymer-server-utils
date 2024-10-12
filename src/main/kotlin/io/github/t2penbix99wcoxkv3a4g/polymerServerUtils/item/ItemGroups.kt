@@ -25,6 +25,7 @@ object ItemGroups {
             entries.add(Items.BLAVINGAD)
             entries.add(Items.BREAD)
             entries.add(Items.BROWN_BEAR)
+            entries.add(Items.HAH)
         }
         .build()
     

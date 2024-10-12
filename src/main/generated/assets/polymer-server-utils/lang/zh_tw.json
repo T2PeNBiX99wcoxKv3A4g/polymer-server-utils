@@ -11,6 +11,7 @@
   "item.polymer-server-utils.cooked_rotten_flesh": "烤腐肉",
   "item.polymer-server-utils.gray_shark": "灰色玩具鯊魚",
   "item.polymer-server-utils.gray_shark.tooltip": "別名 Klappar Haj",
+  "item.polymer-server-utils.hah": "哈?",
   "tooltip.polymer-server-utils.owner.craft": "由 %s 製造",
-  "tooltip.polymer-server-utils.owner.rename": "%s 被 %s 重新命名"
+  "tooltip.polymer-server-utils.owner.rename": "%s 的 %s"
 }

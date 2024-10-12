@@ -34,13 +34,16 @@ object Items {
     val BLAHAJ = register("blue_shark", CuddlyItem(Item.Settings().maxCount(1), "blue_shark"))
 
     @JvmField
-    val BLAVINGAD = register("blue_whale", CuddlyItem(Item.Settings().maxCount(1), "blue_whale"))
+    val BLAVINGAD = register("blue_whale", ItemContainerCuddlyItem(Item.Settings().maxCount(1), "blue_whale"))
 
     @JvmField
     val BREAD = register("bread", CuddlyItem(Item.Settings().maxCount(1), "bread", false))
 
     @JvmField
     val BROWN_BEAR = register("brown_bear", CuddlyItem(Item.Settings().maxCount(1), "brown_bear"))
+    
+    @JvmField
+    val HAH = register("hah", HahItem())
 
     private fun register(id: String, item: Item): Item {
         return Registry.register(Registries.ITEM, Identifier.of(Utils.MOD_ID, id), item)

@@ -14,8 +14,8 @@ import net.minecraft.world.World
 import net.minecraft.component.DataComponentTypes as MCDataComponentTypes
 
 // From: https://github.com/hibiii/Blahaj/blob/main/platform-quilt-1.20.4/src/main/java/hibi/blahaj/CuddlyItem.java
-class CuddlyItem(settings: Settings, modelid: String, hasTooltio: Boolean = true) :
-    CustomPolymerItem(settings, Items.WHITE_WOOL, modelid) {
+open class CuddlyItem(settings: Settings, modelid: String, hasTooltio: Boolean = true, item: Item = Items.WHITE_WOOL) :
+    CustomPolymerItem(settings, item, modelid) {
     val subtitle: Text? = if (hasTooltio) Text.translatable("item.${Utils.MOD_ID}.${modelid}.tooltip")
         .formatted(Formatting.GRAY) else null
 

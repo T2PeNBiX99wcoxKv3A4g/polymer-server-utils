@@ -19,6 +19,7 @@ class ChineseLangProvider(
         translationBuilder.add(Items.BLAVINGAD, "柔软玩具蓝鲸")
         translationBuilder.add(Items.BROWN_BEAR, "柔软玩具棕熊")
         translationBuilder.add(Items.BREAD, "面包枕头")
+        translationBuilder.add(Items.HAH, "哈?")
 
         loadExistingFile(dataGenerator, translationBuilder, "zh_cn")
     }

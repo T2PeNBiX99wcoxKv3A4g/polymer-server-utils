@@ -19,6 +19,7 @@ class EnglishLangProvider(
         translationBuilder.add(Items.BLAVINGAD, "Soft Toy Blue Whale")
         translationBuilder.add(Items.BROWN_BEAR, "Soft Toy Brown Bear")
         translationBuilder.add(Items.BREAD, "Bread Pillow")
+        translationBuilder.add(Items.HAH, "HAH?")
 
         loadExistingFile(dataGenerator, translationBuilder, "en_us")
     }
