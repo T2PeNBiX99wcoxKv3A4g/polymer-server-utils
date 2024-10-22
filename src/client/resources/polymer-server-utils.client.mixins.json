@@ -3,11 +3,11 @@
   "package": "io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "BipedEntityModelMixin",
     "ClientConnectionMixin",
-    "CreeperIgniteGoalMixinClient",
-    "ItemMixin",
-    "PlayerEntityRendererMixin"
+    "client.BipedEntityModelMixin",
+    "client.CreeperIgniteGoalMixin",
+    "client.ItemMixin",
+    "client.PlayerEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

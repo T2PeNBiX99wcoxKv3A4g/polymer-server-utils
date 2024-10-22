@@ -1,4 +1,4 @@
-package io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin;
+package io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin.client;
 
 import eu.pb4.polymer.core.api.item.PolymerItemUtils;
 import io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.Utils;

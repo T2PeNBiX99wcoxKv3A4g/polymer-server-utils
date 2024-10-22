@@ -1,4 +1,4 @@
-package io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin;
+package io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin.client;
 
 import io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.impl.ItemEX;
 import net.minecraft.item.Item;

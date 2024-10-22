@@ -1,4 +1,4 @@
-package io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin;
+package io.github.t2penbix99wcoxkv3a4g.polymerServerUtils.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.LivingEntity;
@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 // https://github.com/JuaanP/CreeperBackguard/blob/main/src/main/java/com/juaanp/creeperbackguard/mixin/CreeperIgniteGoalMixinClient.java
 @Mixin(CreeperIgniteGoal.class)
-public class CreeperIgniteGoalMixinClient {
+public class CreeperIgniteGoalMixin {
     @Shadow
     private LivingEntity target;
 
@@ -25,7 +25,7 @@ public class CreeperIgniteGoalMixinClient {
 
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     private void creeperIgnitionGoal(CallbackInfo ci) {
-        if (this.target instanceof PlayerEntity player) {
+        if (this.target instanceof PlayerEntity) {
             var creeper = this.creeper;
             var minecraftClient = MinecraftClient.getInstance();
             var gameOptions = minecraftClient.options;
