@@ -15,13 +15,9 @@ object Utils {
     private val _cuddlyItemList = mutableListOf<String>()
 
     @JvmStatic
-    fun addCuddlyItem(name: String) {
-        _cuddlyItemList.add("${MOD_ID}:${name}")
-    }
+    fun addCuddlyItem(name: String) = _cuddlyItemList.add("${MOD_ID}:${name}")
 
     @JvmStatic
     val CuddlyItemList: MutableList<String>
-        get() {
-            return _cuddlyItemList
-        }
+        get() = _cuddlyItemList
 }
