@@ -6,7 +6,10 @@
     "AllayEntityMixin",
     "AnvilScreenHandlerMixin",
     "ClientConnectionMixin",
-    "ForgingScreenHandlerMixin"
+    "CreeperIgniteGoalMixin",
+    "ForgingScreenHandlerMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

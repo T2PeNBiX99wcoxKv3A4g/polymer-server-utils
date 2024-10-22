@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(ForgingScreenHandler.class)
 public class ForgingScreenHandlerMixin {
-
     @Shadow
-    protected @Final PlayerEntity player;
+    @Final
+    protected PlayerEntity player;
 }

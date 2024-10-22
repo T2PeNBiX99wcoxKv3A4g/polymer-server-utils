@@ -11,8 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(AnvilScreenHandler.class)
-public class AnvilScreenHandlerMixin extends ForgingScreenHandlerMixin {
-
+class AnvilScreenHandlerMixin extends ForgingScreenHandlerMixin {
     @Inject(
             method = "updateResult()V",
             at = {
@@ -28,7 +27,7 @@ public class AnvilScreenHandlerMixin extends ForgingScreenHandlerMixin {
             expect = 2,
             require = 2
     )
-    public void setName(CallbackInfo ci, @Local(ordinal = 1) ItemStack itemStack2) {
+    private void setName(CallbackInfo ci, @Local(ordinal = 1) ItemStack itemStack2) {
         if(itemStack2.getItem() instanceof CuddlyItem) {
             itemStack2.set(DataComponentTypes.OWNER, player.getName().getString());
         }

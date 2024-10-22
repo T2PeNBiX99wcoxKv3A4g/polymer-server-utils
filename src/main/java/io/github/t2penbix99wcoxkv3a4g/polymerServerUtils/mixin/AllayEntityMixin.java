@@ -11,13 +11,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AllayEntity.class)
-public class AllayEntityMixin {
+class AllayEntityMixin {
     @Inject(
             method = "interactMob",
             at = @At("HEAD"),
             cancellable = true
     )
-    public void preventTakePlush(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> info) {
+    private void preventTakePlush(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> info) {
         if (player.getStackInHand(hand).getItem() instanceof CuddlyItem) {
             info.setReturnValue(ActionResult.PASS);
             info.cancel();

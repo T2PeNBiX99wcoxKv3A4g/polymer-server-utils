@@ -5,6 +5,7 @@
   "client": [
     "BipedEntityModelMixin",
     "ClientConnectionMixin",
+    "CreeperIgniteGoalMixinClient",
     "ItemMixin",
     "PlayerEntityRendererMixin"
   ],
