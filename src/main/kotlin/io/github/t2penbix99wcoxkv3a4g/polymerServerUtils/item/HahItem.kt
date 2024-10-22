@@ -8,6 +8,7 @@ import net.minecraft.entity.Entity
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.entity.attribute.EntityAttributes
+import net.minecraft.entity.damage.DamageTypes
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.item.ItemUsageContext
@@ -83,30 +84,19 @@ class HahItem() : SimplePolymerItem(
 
         if (!selected) {
             if (isChanged) {
-                if (mob.noClip)
-                    mob.noClip = false
-                if (mob.isPlayer) {
-                    val player = mob as PlayerEntity
-                    if (player.abilities.allowFlying) {
-                        player.abilities.flying = false
-                        player.abilities.allowFlying = false
-                    }
+                if (!mob.isPlayer) {
+                    if (mob.noClip)
+                        mob.noClip = false
                 }
             }
             return
         }
 
-        if (!mob.noClip)
-            mob.noClip = true
-        if (mob.isPlayer) {
-            val player = mob as PlayerEntity
-            player.abilities.flying = true
-            player.abilities.allowFlying = true
+        if (!mob.isPlayer) {
+            if (!mob.noClip)
+                mob.noClip = true
+            isChanged = true
         }
-        isChanged = true
-        // lazy
-        if (mob.health >= mob.maxHealth) return
-        mob.health = mob.maxHealth
     }
 
     override fun useOnBlock(context: ItemUsageContext): ActionResult {
@@ -148,7 +138,8 @@ class HahItem() : SimplePolymerItem(
     ): ActionResult {
         if (!entity.isAlive)
             return ActionResult.FAIL
-        entity.kill()
+        val source = entity.damageSources.create(DamageTypes.GENERIC_KILL, user)
+        entity.damage(source, Float.MAX_VALUE)
         return ActionResult.SUCCESS
     }
 }
